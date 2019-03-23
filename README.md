@@ -3,7 +3,7 @@
 > React Native hook for Back Handler
 
 ```
-import useAppState from '@rnhooks/back-handler';
+import useBackHandler from '@rnhooks/back-handler';
 
 function backhandler () {
   // ... Custom Setup
