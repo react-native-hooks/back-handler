@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "packages": {
+    "@rnhooks/back-handler": {
+      "signature": "ce0e38de77b86a5094030462a80668da",
+      "file": true
+    }
+  }
+}
