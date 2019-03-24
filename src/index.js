@@ -1,14 +1,14 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react';
-import { BackHandler } from 'react-native';
+import React, { useEffect, useState } from "react";
+import { BackHandler } from "react-native";
 
 const initialState = 0;
 
-export default (backHandler) => {
+export default backHandler => {
   const [count, updateCount] = useState(initialState);
   function handleBackPress() {
     updateCount(prevCount => prevCount + 1);
-    if (typeof backHandler === 'function' && backHandler !== 'exit') {
+    if (typeof backHandler === "function" && backHandler !== "exit") {
       backHandler();
       return true;
     }
@@ -16,9 +16,9 @@ export default (backHandler) => {
   }
 
   useEffect(() => {
-    BackHandler.addEventListener('hardwareBackPress', handleBackPress);
+    BackHandler.addEventListener("hardwareBackPress", handleBackPress);
     return () => {
-      BackHandler.removeEventListener('hardwareBackPress', handleBackPress);
+      BackHandler.removeEventListener("hardwareBackPress", handleBackPress);
     };
   }, []);
 
